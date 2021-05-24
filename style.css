@@ -1,0 +1,87 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+}
+
+body {
+    background-color: #000;
+    font-family: helvetica;
+}
+
+.swipe-card-container {
+    height: 380px;
+    width: 250px;
+    margin: 180px auto;
+    position: relative;
+}
+
+.card-behind, .card-above {
+    height: 280px;
+    width: 250px;
+    background: rgba(255, 255, 255, 2);
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-radius: 20px;
+}
+
+.card-above {
+    padding: 20px;
+    background: url("images/card-background.jpg");
+    background-size: 60vh;
+    background-position: center;
+}
+
+.heading {
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.explanation1, .explanation2 {
+    color: #f2f2f2;
+    font-weight: bold
+}
+
+.explanation1 {
+    color: #21094e;
+}
+
+.card-behind {
+    height: 278px;
+    width: 248px;
+    background-color: #1eae98;
+    color: #000;
+}
+
+.emoji {
+    height: 40px;
+    width: 40px;
+    box-shadow: 2px 2px 10px gray;
+    border-radius: 100%;
+    background-color: white;
+    margin: 10px auto;
+}
+
+.card-mouseover-anim {
+    animation-name: anim-mouseover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.card-mouseout-anim {
+    animation-name: anim-mouseout;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes anim-mouseover {
+    from {bottom: 0;}
+    to {bottom: 100px;}
+}
+
+@keyframes anim-mouseout {
+    from {bottom: 100px;}
+    to {bottom: 0;}
+}
